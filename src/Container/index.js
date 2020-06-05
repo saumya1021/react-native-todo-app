@@ -1,6 +1,6 @@
 import React from 'react';
 import SplashScreen from './SplashScreen';
-import LoginScreen from './Login';
+import Todos from './Todos';
 import {createAppContainer} from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack'
 
@@ -9,12 +9,12 @@ const AppNavigator = createStackNavigator({
     Splash: {
       screen: SplashScreen,
     },
-    Login: {
-      screen: LoginScreen,
+    Todos: {
+      screen: Todos
     }
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Splash',
     swipeEnabled: false,
     headerMode: 'none',
   },

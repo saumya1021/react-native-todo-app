@@ -1,16 +1,30 @@
-
 import React, { Component } from 'react';
-import {
-    Text,
-    View,
-} from 'react-native';
+import { View, Image } from 'react-native';
+import { SPLASH_LOGO } from '../../config/images';
+import styles from './style';
 
-export default class SplashScreen extends Component {
-    render() {
-        return (
-          <View>
-            <Text>instructions</Text>
-          </View>
-        );
-    }
+class SplashScreen extends Component {
+
+  componentDidMount() {
+
+    setTimeout(() => {
+      this.props.navigation.navigate('Todos');
+    }, 2500);
+    
+  }
+
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image
+          source={SPLASH_LOGO}
+          style={styles.splashLogo}
+          resizeMode={'contain'}
+        />
+      </View>
+    );
+  }
 }
+
+export default SplashScreen;

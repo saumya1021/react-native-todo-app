@@ -1,4 +1,4 @@
-# react-native Login-Demo
+# react-native Todo App
 
 ## Requirements
 
